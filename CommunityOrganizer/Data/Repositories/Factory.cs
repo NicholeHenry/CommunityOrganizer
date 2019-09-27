@@ -21,6 +21,8 @@ namespace CommunityOrganizer.Data.Repositories
             return new BaseRepository<Resident>(context);
         }
 
+       
+
         public IRepository<InformationBoard> GetInformationBoardRepository()
         {
             return new BaseRepository<InformationBoard>(context);
