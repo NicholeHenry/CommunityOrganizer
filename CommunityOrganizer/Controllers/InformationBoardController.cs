@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using CommunityOrganizer.Data.Repositories;
+using CommunityOrganizer.Models;
 using CommunityOrganizer.ViewModels.InformationBoard;
 using Microsoft.AspNetCore.Mvc;
 
@@ -33,7 +34,7 @@ namespace CommunityOrganizer.Controllers
         public IActionResult Create(InformationBoardCreateViewModel model)
         {
             model.Persist(repositoryFactory);
-            return RedirectToAction(controllerName: nameof(InformationBoardController), actionName: nameof(Index));
+            return RedirectToAction(controllerName: nameof(InformationBoard), actionName: nameof(Index));
         }
 
         [HttpGet]
