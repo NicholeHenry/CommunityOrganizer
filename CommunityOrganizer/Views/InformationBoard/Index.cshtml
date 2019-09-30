@@ -4,10 +4,11 @@
     ViewData["Title"] = "Index";
 }
 <body id="bg-img1">
-<h1>Index</h1>
+<h2>Message Board</h2>
 
 <p>
-    <a asp-action="Create">Create New</a>
+   
+    <button asp-controller="InformationBoard" asp-action="Create">Add Message</button>
 </p>
 
 @foreach (var item in Model) {

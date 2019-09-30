@@ -36,3 +36,23 @@ th{
 td{
     color:black;
 }
+
+h1{
+    background-color: azure;
+    background-size:contain;
+    border-style: solid double;
+    border-color:black;
+    font-size:75px;
+    text-align:center;
+    
+    align-content:center;
+
+}
+h2{
+    background-color:olivedrab;
+    background-size:35px 45px;
+    font-size:40px;
+    text-align:left;
+    border-style:double;
+    border-color:lime;
+}
