@@ -20,7 +20,7 @@ namespace CommunityOrganizer.ViewModels
         public int LotNumber { get; set; }
 
         [DisplayName("Phone Number")]
-        [DataType(DataType.PhoneNumber)]
+        
         public int PhoneNumber { get; set; }
 
         [EmailAddress(ErrorMessage = "Invalid Email")]

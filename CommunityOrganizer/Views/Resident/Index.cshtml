@@ -3,18 +3,14 @@
 @{
     ViewData["Title"] = "Index";
 }
+<body id="bg-img2">
 
-<h1>Index</h1>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
+
 <table class="table">
     <thead>
         <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Id)
-            </th>
+            
             <th>
                 @Html.DisplayNameFor(model => model.FirstName)
             </th>
@@ -36,9 +32,7 @@
     <tbody>
 @foreach (var item in Model) {
         <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Id)
-            </td>
+           
             <td>
                 @Html.DisplayFor(modelItem => item.FirstName)
             </td>
@@ -63,3 +57,4 @@
 }
     </tbody>
 </table>
+    </body>

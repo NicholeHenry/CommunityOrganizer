@@ -1,5 +1,38 @@
-﻿body {
+﻿#bg-img1 {
     
     background-image: url('images/img_1403.jpg');
    background-size:contain;
+}
+
+.card {
+    display: grid;
+   
+}
+
+#bg-img2 {
+    background-image: url('images/img_1421.jpg');
+    background-size:cover;
+}
+
+.footer{
+    background-color:black;
+    color:white;
+}
+
+body{
+    color:black;
+}
+
+table{
+    
+   background-color:greenyellow;
+}
+
+th{
+    background-color:black;
+    color:antiquewhite;
+}
+
+td{
+    color:black;
 }
