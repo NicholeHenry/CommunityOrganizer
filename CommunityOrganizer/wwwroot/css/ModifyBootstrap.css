@@ -26,6 +26,7 @@ body{
 table{
     
    background-color:greenyellow;
+   font-weight:800;
 }
 
 th{
@@ -37,22 +38,41 @@ td{
     color:black;
 }
 
-h1{
-    background-color: azure;
-    background-size:contain;
-    border-style: solid double;
-    border-color:black;
-    font-size:75px;
-    text-align:center;
-    
-    align-content:center;
-
+h1 {
+    background-size: contain;
+    border-style: solid;
+    border-bottom-width: thick;
+    border-color: #85144b;
+    font-size: 75px;
+    font-style: italic;
+    text-align: center;
+    color: black;
+    align-content: center;
+    padding-top:10px;
 }
-h2{
-    background-color:olivedrab;
-    background-size:35px 45px;
+h2 {
+    background-color: darkslategray;
+    background-size: 35px 45px;
+    font-size: 40px;
+    text-align: center;
+    border-style: solid double;
+    border-color: lawngreen;
+    color:lightseagreen;
+}
+
+h3{
+    background-color:cadetblue;
+    background-size:50px 25px;
     font-size:40px;
-    text-align:left;
-    border-style:double;
-    border-color:lime;
+    text-align:center;
+    border-color:lawngreen;
+    border-style:dashed;
+    color: black;
+}
+blockquote {
+    color:black;
+    background-color: aliceblue;opacity:0.6;
+    
+}
+    
 }
