@@ -12,23 +12,23 @@ namespace CommunityOrganizer.Models
     {
         public int Id { get; set; }
        
-        [DisplayName("First Name")]
+        
         public string FirstName { get; set; }
 
 
-        [DisplayName("Last Name")]
+       
         public string LastName { get; set; }
 
 
-        [DisplayName("Lot Name")]
+        
         public int LotNumber { get; set; }
 
-        [DisplayName("Phone Number")]
-        [DataType(DataType.PhoneNumber)]
+       
+       
         public int PhoneNumber { get; set; }
 
 
-        [EmailAddress(ErrorMessage = "Invalid Email")]
+       
         public string Email { get; set; }
     }
 }

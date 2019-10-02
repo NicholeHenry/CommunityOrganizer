@@ -4,10 +4,6 @@
    background-size:contain;
 }
 
-.card {
-    display: grid;
-   
-}
 
 #bg-img2 {
     background-image: url('images/img_1421.jpg');
@@ -39,16 +35,17 @@ td{
 }
 
 h1 {
+    background-image: linear-gradient(to right,darkslategray, #0088cc);
     background-size: contain;
     border-style: solid;
     border-bottom-width: thick;
-    border-color: #85144b;
+    border-color: lawngreen;
     font-size: 75px;
     font-style: italic;
     text-align: center;
     color: black;
     align-content: center;
-    padding-top:10px;
+    padding-top: 10px;
 }
 h2 {
     background-color: darkslategray;
@@ -57,7 +54,7 @@ h2 {
     text-align: center;
     border-style: solid double;
     border-color: lawngreen;
-    color:lightseagreen;
+    color:black;
 }
 
 h3{
@@ -72,7 +69,15 @@ h3{
 blockquote {
     color:black;
     background-color: aliceblue;opacity:0.6;
+    background-size:contain;
     
 }
+
+newform {
+    width: 100%;
+    padding: 20px 20px;
+    margin: 8px 0;
+    display: inline-block;
     
+    box-sizing: border-box;
 }
