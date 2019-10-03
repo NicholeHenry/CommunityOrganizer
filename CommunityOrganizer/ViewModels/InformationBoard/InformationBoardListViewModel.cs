@@ -23,13 +23,24 @@ namespace CommunityOrganizer.ViewModels.InformationBoard
         public int Id { get; set; }
         public string HeadLine { get; set; }
 
+        public string HeadLineTwo { get; set; }
+
+        public string HeadLineThree { get; set; }
+
         public string MessageBody { get; set; }
+        public string MessageBodytwo { get; set; }
+        public string MessageBodythree { get; set; }
 
         public InformationBoardListViewModel(Models.InformationBoard informationBoard)
         {
             this.Id = informationBoard.Id;
             this.HeadLine = informationBoard.HeadLine;
+            this.HeadLineTwo = informationBoard.HeadLineTwo;
+            this.HeadLineThree = informationBoard.HeadLineTwo;
+          
             this.MessageBody = informationBoard.MessageBody;
+            this.MessageBodytwo = informationBoard.MessageBodytwo;
+            this.MessageBodythree = informationBoard.MessageBodythree;
         }
     }
 }

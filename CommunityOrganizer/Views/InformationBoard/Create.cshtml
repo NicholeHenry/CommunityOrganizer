@@ -17,15 +17,34 @@
                 <input asp-for="HeadLine" class="form-control" />
                 <span asp-validation-for="HeadLine" class="text-danger"></span>
             </div>
+           
             <div class="form-group">
                 <label asp-for="MessageBody" class="control-label"></label>
                 <input asp-for="MessageBody" class="form-control" />
                 <span asp-validation-for="MessageBody" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
-            </div>
-        </form>
+
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label asp-for="HeadLineTwo" class="control-label"></label>
+                    <input asp-for="HeadLineTwo" class="form-control" />
+                    <span asp-validation-for="HeadLineTwo" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="MessageBodytwo" class="control-label"></label>
+                    <input asp-for="MessageBodytwo" class="form-control" />
+                    <span asp-validation-for="MessageBodytwo" class="text-danger"></span>
+                </div>
+                </div>
+                <div class="form-group">
+                    <label asp-for="MessageBodythree" class="control-label"></label>
+                    <input asp-for="MessageBodythree" class="control-label" />
+                    <span asp-validation-for="MessageBodythree" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Create" class="btn btn-primary" />
+                </div>
+</form>
     </div>
 </div>
 

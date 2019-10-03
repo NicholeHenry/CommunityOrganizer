@@ -4,14 +4,16 @@ using CommunityOrganizer.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace CommunityOrganizer.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20191003173628_MessageBodyOne")]
+    partial class MessageBodyOne
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -27,12 +29,6 @@ namespace CommunityOrganizer.Data.Migrations
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("HeadLine")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("HeadLineThree")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("HeadLineTwo")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("MessageBody")

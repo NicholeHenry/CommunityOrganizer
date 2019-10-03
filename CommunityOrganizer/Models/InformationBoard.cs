@@ -11,6 +11,14 @@ namespace CommunityOrganizer.Models
 
         public string HeadLine { get; set; }
 
+        public string HeadLineTwo { get; set; }
+
+        public string HeadLineThree { get; set; }
+
         public string MessageBody { get; set; }
+
+        public string MessageBodytwo { get; set; }
+
+        public string MessageBodythree { get; set; }
     }
 }

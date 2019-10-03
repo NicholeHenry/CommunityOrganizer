@@ -7,22 +7,43 @@
         <div>
             <h2>Message Board</h2>
 
-            
+
             @foreach (var item in Model)
             {
 
 
+                <div class="container-fluid">
+                    <div class="col-md-4">
+                        <div class="card text-white bg-primary mb-3" style="max-width: 20rem;">
+                            <div class="card-header">@Html.DisplayFor(modelItem => item.HeadLine)</div>
+                            <div class="card-body">
+                                
+                                <p class="card-text">@Html.DisplayFor(modelItem => item.MessageBody)</p>
+                            </div>
+                           
+                        </div>
+                    <div class="col-md-4">
+                            <div class="card text-white bg-primary mb-3" style="max-width: 20rem;">
+                                <div class="card-header">@Html.DisplayFor(modelItem => item.HeadLine)</div>
+                                    <div class="card-body">
+                                         <p class="card-text">@Html.DisplayFor(modelItem => item.MessageBodytwo)</p>
 
-                <div class="card-group">
-                    <div class="card" style="max-width: 20rem;">
-                        <div class="card-header">@Html.DisplayFor(modelItem => item.HeadLine)</div>
-                        <div class="card-body">
+                                    </div>
 
-                            <p class="card-text">@Html.DisplayFor(modelItem => item.MessageBody)</p>
+                                </div>
+                            </div>
                         </div>
 
+                    <div class="col-md-4">
+                        <div class="card text-black-50-white bg-primary mb-3" style="max-width: 20rem">
+                            <div class="card-header">@Html.DisplayFor(modelItem => item.HeadLine)</div>
+                                <div class="card-body">
+                                    <p class="card-text">@Html.DisplayFor(modelItem => item.MessageBodythree)</p> 
+                                </div>
+                        </div>
                     </div>
-                </div>
+                        
+               </div>
             }
-            </div>
+           </div>
     </body>

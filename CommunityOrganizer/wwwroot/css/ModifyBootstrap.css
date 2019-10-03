@@ -46,6 +46,7 @@ h1 {
     color: black;
     align-content: center;
     padding-top: 10px;
+    opacity:0.9;
 }
 h2 {
     background-color: darkslategray;
@@ -73,11 +74,25 @@ blockquote {
     
 }
 
-newform {
+.newform {
     width: 100%;
     padding: 20px 20px;
     margin: 8px 0;
     display: inline-block;
     
     box-sizing: border-box;
+}
+.backgroundhome {
+    background-color: dimgray;
+    opacity: 0.5;
+    width: 90%;
+    height: 80%;
+    position: relative;
+   
+}
+.flexcontainer{
+    display:flex;
+}
+.card{
+
 }
