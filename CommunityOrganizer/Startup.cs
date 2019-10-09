@@ -13,6 +13,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using CommunityOrganizer.Data.Repositories;
+using CommunityOrganizer.Models;
 
 namespace CommunityOrganizer
 {
@@ -34,6 +35,7 @@ namespace CommunityOrganizer
             services.AddScoped<Factory>();
             services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
                 .AddEntityFrameworkStores<ApplicationDbContext>();
+            services.Configure<Text>(Configuration.GetSection("Text"));
             services.AddControllersWithViews();
             services.AddRazorPages();
         }
