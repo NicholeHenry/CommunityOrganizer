@@ -3,7 +3,7 @@
 @{
     ViewData["Title"] = "Index";
 }
-    <body id="bg-img1">
+    <body id="bg-img3">
         <br />
 
 
@@ -16,11 +16,14 @@
             {
 
                     <div class="card">
-                        <div class="card-header">@Html.DisplayFor(modelItem => item.HeadLine)</div>
+                        <div class="card-title">@Html.DisplayFor(modelItem => item.HeadLine)</div>
                         <div class="card-body">
 
                             <p class="card-text">@Html.DisplayFor(modelItem => item.MessageBody)</p>
-
+                            <p>
+                                <button asp-controller="InformationBoard" asp-action="Edit" type="button" class="btn btn-outline-secondary btn-sm">Edit</button>
+                                <button asp-controller="InformationBoard" asp-action="Delete" type="button" class="btn btn-outline-secondary btn-sm">Delete</button>
+                            </p>
                         </div>
                     </div>
                 
@@ -31,5 +34,5 @@
 
             </div>
 
-
+        <br />
     </body>

@@ -9,37 +9,26 @@ using Twilio.Rest.Api.V2010.Account;
 using Twilio.Types;
 using CommunityOrganizer.Models;
 using Microsoft.Extensions.Options;
+using System.Configuration;
 
 namespace CommunityOrganizer.Controllers
 {
     public class TextController : TwilioController
     {
-        private readonly Text textDetails;
-
-        
-
-        public TextController(IOptions<Text> textAlertDetails)
-
-        {
-
-            textDetails = textAlertDetails.Value ?? throw new ArgumentException(nameof(textAlertDetails));
-
-
-
-        }
-
+       
 
         public IActionResult BoilOrder()
         {
 
-            
+            var accountSid = "";
+            var authToken = "";
 
-            TwilioClient.Init(textDetails.AccountSid, textDetails.AuthToken);
+            TwilioClient.Init(accountSid, authToken);
 
-            PhoneNumber to = new PhoneNumber("ToNumber");
-            PhoneNumber from = new PhoneNumber("FromNumber");
+            var to = new PhoneNumber("");
+            var from = new PhoneNumber("");
 
-            var message = MessageResource.Create(
+            MessageResource message = MessageResource.Create(
                 to: to,
                 from: from,
                 body: "Boil Order in place for 24 hours."
@@ -48,17 +37,19 @@ namespace CommunityOrganizer.Controllers
             return Content(message.Sid);
 
         }
-        public IActionResult FloodWarning()
+         public IActionResult FloodWarning()
+
 
         {
-           
+            var accountSid = "";
+            var authToken = "";
 
-            TwilioClient.Init(textDetails.AccountSid, textDetails.AuthToken);
+            TwilioClient.Init(accountSid, authToken);
 
-            var to = new PhoneNumber("ToNumber");
-            var from = new PhoneNumber("FromNumber");
+            var to = new PhoneNumber("");
+            var from = new PhoneNumber("");
 
-            var message = MessageResource.Create(
+            MessageResource message = MessageResource.Create(
                 to: to,
                 from: from,
                 body: "Flash Flood Waring:Be aware of any signs of heavy rain.+" +
@@ -73,13 +64,16 @@ namespace CommunityOrganizer.Controllers
         public IActionResult TornadoWatch()
         {
 
-            
-            TwilioClient.Init(textDetails.AccountSid, textDetails.AuthToken);
 
-            var to = new PhoneNumber("ToNumber");
-            var from = new PhoneNumber("FromNumber");
+            var accountSid = "";
+            var authToken = "";
 
-            var message = MessageResource.Create(
+            TwilioClient.Init(accountSid, authToken);
+
+            var to = new PhoneNumber("");
+            var from = new PhoneNumber("");
+
+            MessageResource message = MessageResource.Create(
                 to: to,
                 from: from,
                 body: "Tornado Watch: Keep alert and watch for changing weather conditions."+
@@ -97,13 +91,16 @@ namespace CommunityOrganizer.Controllers
         public IActionResult TornadoWarning()
         {
 
-           
-            TwilioClient.Init(textDetails.AccountSid, textDetails.AuthToken);
 
-            var to = new PhoneNumber("ToNumber");
-            var from = new PhoneNumber("FromNumber");
+            var accountSid = "";
+            var authToken = "";
 
-            var message = MessageResource.Create(
+            TwilioClient.Init(accountSid, authToken);
+
+            var to = new PhoneNumber("");
+            var from = new PhoneNumber("");
+
+            MessageResource message = MessageResource.Create(
                 to: to,
                 from: from,
                 body: "Take shelter immediately; do not stay in a mobile home."+

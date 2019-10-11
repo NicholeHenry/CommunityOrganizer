@@ -9,13 +9,14 @@
 
 
 .card {
-    color: aliceblue;
+    color: black;
+    
     
     border: 2px solid #e7e7e7;
-    border-color: lawngreen;
+    
     border-radius: 4px;
     padding: .5rem;
-    background-color: black;
+    background-color: lightgray;
 }
 #bg-img1 {
     
@@ -26,6 +27,11 @@
 
 #bg-img2 {
     background-image: url('images/img_1421.jpg');
+    background-size:cover;
+}
+
+#bg-img3 {
+    background-image: url('images/img_1551.jpg');
     background-size:cover;
 }
 
@@ -40,7 +46,7 @@ body{
 
 table{
     
-   background-color:greenyellow;
+   background-color:ghostwhite;
    font-weight:800;
 }
 
@@ -56,9 +62,8 @@ td{
 h1 {
     background-image: linear-gradient(to right,darkslategray, #0088cc);
     background-size: contain;
-    border-style: solid;
-    border-bottom-width: thick;
-    border-color: lawngreen;
+   
+    
     font-size: 75px;
     font-style: italic;
     text-align: center;
@@ -77,13 +82,14 @@ h2 {
     color:black;
 }
 
-h3{
-    background-color:cadetblue;
-    background-size:50px 25px;
-    font-size:40px;
-    text-align:center;
-    border-color:lawngreen;
-    border-style:dashed;
+h3 {
+    font-size: 40px;
+    text-align: center;
+    color:black;
+    background-color: lightsteelblue;
+    opacity: 0.4;
+    background-size: 50px 25px;
+   
     color: black;
 }
 blockquote {
@@ -102,10 +108,10 @@ blockquote {
     box-sizing: border-box;
 }
 .backgroundhome {
-    background-color: dimgray;
+    background-color: antiquewhite;
     opacity: 0.5;
-    width: 90%;
-    height: 80%;
+    width: 70%;
+    height: 70%;
     position: relative;
    
 }
