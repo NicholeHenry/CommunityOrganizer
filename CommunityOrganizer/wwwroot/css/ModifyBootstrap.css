@@ -9,29 +9,35 @@
 
 
 .card {
-    color: black;
+    color:gainsboro;
     
     
     border: 2px solid #e7e7e7;
     
     border-radius: 4px;
     padding: .5rem;
-    background-color: lightgray;
+    background-color: dimgray;
 }
 #bg-img1 {
-    
-    background-image: url('images/img_1403.jpg');
-   background-size:contain;
+    background-image: url('images/img_1402.jpg');
+    background-size: contain;
 }
 
 
 #bg-img2 {
-    background-image: url('images/img_1421.jpg');
-    background-size:cover;
+    background: url('images/img_1421.jpg');
+    background-size: cover;
+    position: relative;
+    z-index: 100;
 }
 
 #bg-img3 {
     background-image: url('images/img_1551.jpg');
+    background-size:cover;
+}
+
+#bg-img4 {
+    background-image: url('images/img_1421 (1).jpg');
     background-size:cover;
 }
 
@@ -92,6 +98,15 @@ h3 {
    
     color: black;
 }
+
+.headline{
+    font-size:40px;
+    text-align:center;
+    color:dimgrey;
+    background-color:antiquewhite;
+    opacity:0.4;
+    background-size:50px 25px;
+}
 blockquote {
     color:black;
     background-color: aliceblue;opacity:0.6;
@@ -120,4 +135,15 @@ blockquote {
 }
 .card{
 
+}
+
+.parallaxone {
+    background-image: url('images/img_1421.jpg');
+    
+    min-height: 500px;
+    
+    background-attachment: fixed;
+    background-position: inherit;
+    background-repeat: repeat;
+    background-size: cover;
 }

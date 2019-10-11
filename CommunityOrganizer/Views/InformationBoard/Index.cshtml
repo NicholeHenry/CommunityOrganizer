@@ -6,9 +6,9 @@
     <body id="bg-img3">
         <br />
 
+        <div class="headline">Important Things</div>
 
-
-
+        <br />
         <div class="cards">
 
             @foreach (var item in Model)
@@ -16,7 +16,8 @@
             {
 
                     <div class="card">
-                        <div class="card-title">@Html.DisplayFor(modelItem => item.HeadLine)</div>
+                        <div class="card-header"><h5>@Html.DisplayFor(modelItem => item.HeadLine)</h5></div>
+                        
                         <div class="card-body">
 
                             <p class="card-text">@Html.DisplayFor(modelItem => item.MessageBody)</p>

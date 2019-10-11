@@ -3,25 +3,36 @@
 @{
     ViewData["Title"] = "Index";
 }
-    <body id="bg-img2">
+    <body id="bg-img1">
+
+     <div>
+         <br />
+        <div>
+            <h3>Text Alerts</h3>
+        </div>
+
+        <p>
+            <button asp-controller="Text" asp-action="BoilOrder" class="btn btn-primary" type="button">Boil Order</button>
+
+            <button asp-controller="Text" asp-action="FloodWarning" class="btn btn-success" type="button">Flood Warning</button>
+
+            <button asp-controller="Text" asp-action="TornadoWatch" class="btn btn-warning" type="button">Tornado Watch</button>
+
+
+            <button asp-controller="Text" asp-action="TornadoWarning" class="btn btn-danger" type="button">Tornado Warning</button>
+
+
+
+        </p>
+
+        <br />
+         </div>
+        <div>
         <div>
             <h3>Resident List</h3>
         </div>
 
-        <p>
-            <button asp-controller="Text" asp-action="BoilOrder" class="btn btn-primary" type="button">Send Text Alert : Boil Order</button>
-
-            <button asp-controller="Text" asp-action="FloodWarning" class="btn btn-success" type="button">Send Text Alert : Flood Warning</button>
-
-            <button asp-controller="Text" asp-action="TornadoWatch" class="btn btn-warning" type="button">Send Text Alert : Tornado Watch</button>
-
-        
-            <button asp-controller="Text" asp-action="TornadoWarning" class="btn btn-danger" type="button">Send Text Alert : Tornado Warning</button>
-
-        
-
-        </p>
-
+       <br />
         <table class="table">
             <thead>
                 <tr>
@@ -73,4 +84,6 @@
                 }
             </tbody>
         </table>
+      </div>
+        <br />
     </body>
