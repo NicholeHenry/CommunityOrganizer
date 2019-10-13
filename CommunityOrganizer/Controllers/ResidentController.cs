@@ -2,15 +2,18 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using CommunityOrganizer.Data;
 using CommunityOrganizer.Data.Repositories;
 using CommunityOrganizer.Models;
 using CommunityOrganizer.ViewModels;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace CommunityOrganizer.Controllers
 {
     public class ResidentController : Controller
     {
+        
 
         private Factory repositoryFactory;
 
@@ -57,6 +60,8 @@ namespace CommunityOrganizer.Controllers
             repositoryFactory.GetResidentRepository().Delete(id);
             return RedirectToAction(actionName: nameof(Index));
         }
+
+       
     }
     
-}
+}  

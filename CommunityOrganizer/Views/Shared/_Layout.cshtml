@@ -23,6 +23,8 @@
 
             <div class="collapse navbar-collapse" id="navbarColor01">
                 <ul class="navbar-nav mr-auto">
+                    <partial name="_LoginPartial" />
+
                     <li class="nav-item">
                         <a class="nav-link" asp-Controller="Home" asp-action="Index"> Home </a>
                     </li>
@@ -38,6 +40,15 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" asp-Controller="InformationBoard" asp-action="Create"> Add Message </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class=" nav-link" asp-controller="Search" asp-action="Search">Search Residents</a>
+                    </li>
+
+                    <li class="nav-item">
+
+                        <a class="nav-link" asp-controller="Resident" asp-action="Index">Send Text Alert</a>
+
                     </li>
                 </ul>
                

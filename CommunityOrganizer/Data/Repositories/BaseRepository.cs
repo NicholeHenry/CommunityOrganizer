@@ -47,5 +47,6 @@ namespace CommunityOrganizer.Data.Repositories
             context.Update(model);
             context.SaveChanges();
         }
+
     }
 }
