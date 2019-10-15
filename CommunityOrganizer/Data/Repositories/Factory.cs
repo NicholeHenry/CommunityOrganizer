@@ -28,9 +28,6 @@ namespace CommunityOrganizer.Data.Repositories
             return new BaseRepository<InformationBoard>(context);
         }
 
-        public IRepository<AspNetRoles> GetAspNetRolesRepository()
-        {
-            return new BaseRepository<AspNetRoles>(context);
-        }
+       
     }
 }

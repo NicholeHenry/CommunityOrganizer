@@ -13,7 +13,7 @@ namespace CommunityOrganizer.Data
 
         public DbSet<InformationBoard> InformationBoard { get; set; }
 
-        public DbSet<AspNetRoles> AspNetRoles { get; set; }
+       
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)
         {

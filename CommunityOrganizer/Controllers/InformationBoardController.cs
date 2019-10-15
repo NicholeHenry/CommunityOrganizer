@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using CommunityOrganizer.Data.Repositories;
 using CommunityOrganizer.Models;
 using CommunityOrganizer.ViewModels.InformationBoard;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CommunityOrganizer.Controllers
@@ -22,7 +23,7 @@ namespace CommunityOrganizer.Controllers
             List<InformationBoardListViewModel> informationBoards = InformationBoardListViewModel.GetInformationBoard(repositoryFactory);
             return View(informationBoards);
         }
-
+        [Authorize(Roles ="Administration")]
         [HttpGet]
         public IActionResult Create()
         {
@@ -36,7 +37,7 @@ namespace CommunityOrganizer.Controllers
             model.Persist(repositoryFactory);
             return RedirectToAction(controllerName: nameof(InformationBoard), actionName: nameof(Index));
         }
-
+        [Authorize(Roles ="Authorize")]
         [HttpGet]
         public IActionResult Edit(int id)
         {

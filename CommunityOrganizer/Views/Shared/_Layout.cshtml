@@ -15,45 +15,60 @@
 <body>
     <header>
         <div>
-     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-            
-            <button class="navbar-toggler" aria-expanded="false" aria-controls="navbarColor01" aria-label="Toggle navigation" type="button" data-target="#navbarColor01" data-toggle="collapse">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+            <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
 
-            <div class="collapse navbar-collapse" id="navbarColor01">
-                <ul class="navbar-nav mr-auto">
-                    <partial name="_LoginPartial" />
-
-                    <li class="nav-item">
-                        <a class="nav-link" asp-Controller="Home" asp-action="Index"> Home </a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" asp-Controller="Resident" asp-action="Index"> Resident List </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" asp-controller="Resident" asp-action="Create"> Add Resident </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" asp-Controller="InformationBoard" asp-action="Index"> Message Board </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" asp-Controller="InformationBoard" asp-action="Create"> Add Message </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class=" nav-link" asp-controller="Search" asp-action="Search">Search Residents</a>
-                    </li>
-
-                    <li class="nav-item">
-
-                        <a class="nav-link" asp-controller="Resident" asp-action="Index">Send Text Alert</a>
-
-                    </li>
-                </ul>
+                <button class="navbar-toggler" aria-expanded="false" aria-controls="navbarColor01" aria-label="Toggle navigation" type="button" data-target="#navbarColor01" data-toggle="collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
                
-            </div>
-        </nav>
+                <div class="collapse navbar-collapse" id="navbarColor01">
+                    <ul class="navbar-nav mr-auto">
+
+                        <li class="navbar-nav mr-auto">
+
+                            <a class="nav-link" href="https://localhost:44355/Identity/Account/Register"> Register </a>
+                        </li>
+                        <li class="navbar-nav mr-auto">
+
+                            <a class="nav-link" href="https://localhost:44355/Identity/Account/Login"> Login </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" asp-Controller="Home" asp-action="Index"> Home </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" asp-Controller="Resident" asp-action="Index"> Resident List </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-controller="Resident" asp-action="Create"> Add Resident </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-Controller="InformationBoard" asp-action="Index"> Message Board </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-Controller="InformationBoard" asp-action="Create"> Add Message </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class=" nav-link" asp-controller="Search" asp-action="Search">Search Residents</a>
+                        </li>
+
+                        <li class="nav-item">
+
+                            <a class="nav-link" asp-controller="Resident" asp-action="Index">Send Text Alert</a>
+
+                        </li>
+                        <li class="nav-item">
+                            <form class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
+                                <button type="submit" class="nav-link btn btn-link text-dark">Logout</button>
+                            </form>
+                        </li>
+
+
+                    </ul>
+
+                </div>
+            </nav>
             </div>
     </header>
     <div>

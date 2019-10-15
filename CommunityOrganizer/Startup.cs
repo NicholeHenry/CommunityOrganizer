@@ -34,14 +34,15 @@ namespace CommunityOrganizer
                     Configuration.GetConnectionString("DefaultConnection")));
             services.AddScoped<Factory>();
             services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
-                .AddEntityFrameworkStores<ApplicationDbContext>();
+                    .AddRoles<IdentityRole>()
+                    .AddEntityFrameworkStores<ApplicationDbContext>();
             services.Configure<Text>(Configuration.GetSection("Text"));
             services.AddControllersWithViews();
             services.AddRazorPages();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, IServiceProvider services)
         {
             if (env.IsDevelopment())
             {
@@ -69,6 +70,28 @@ namespace CommunityOrganizer
                     pattern: "{controller=Home}/{action=Index}/{id?}");
                 endpoints.MapRazorPages();
             });
+
+           CreateUserRoles(services).Wait();
         }
+
+        private async Task CreateUserRoles(IServiceProvider serviceProvider)
+        {
+            var RoleManager = serviceProvider.GetRequiredService<RoleManager<IdentityRole>>();
+            var UserManager = serviceProvider.GetRequiredService<UserManager<IdentityUser>>();
+
+            IdentityResult roleResult;
+
+            var roleCheck = await RoleManager.RoleExistsAsync("Administration");
+            if (!roleCheck)
+            {
+                roleResult = await RoleManager.CreateAsync(new IdentityRole("Administration"));
+
+            }
+
+            IdentityUser user = await UserManager.FindByEmailAsync("nichole.henry12@gmail.com");
+            var User = new IdentityUser();
+            await UserManager.AddToRoleAsync(user, "Administration");
+        }
+
     }
 }
