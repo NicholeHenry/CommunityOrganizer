@@ -40,6 +40,10 @@
     background-image: url('images/img_1421 (1).jpg');
     background-size:cover;
 }
+#bg-img5 {
+    background-image: url('images/img_5874.jpg');
+    background-size:cover;
+}
 
 .center {
     display: block;
@@ -153,4 +157,14 @@ blockquote {
     background-position: inherit;
     background-repeat: repeat;
     background-size: cover;
+}
+.boxmodel {
+
+    background-color:rgba(140,114,114,0.4);
+    
+    width: 1020px;
+    border: 15px solid black;
+    padding: 50px;
+    margin: 20px;
+}
 }

@@ -12,19 +12,19 @@ namespace CommunityOrganizer.Models
     {
         public int Id { get; set; }
        
-        
+        [Display(Name ="First Name")]
         public string FirstName { get; set; }
 
 
-       
+       [Display(Name ="Last Name")]
         public string LastName { get; set; }
 
 
-        
+        [Display(Name ="Lot Number")]
         public int LotNumber { get; set; }
 
        
-       
+       [Display(Name ="Phone Number")]
         public int PhoneNumber { get; set; }
 
 

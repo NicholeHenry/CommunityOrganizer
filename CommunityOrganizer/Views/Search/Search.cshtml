@@ -5,14 +5,15 @@
 }
 
 <br />
-
-<h3>Search for Resident</h3>
+<body id="bg-img5">
+<h3>Search</h3>
 
 
 <form asp-controller="Search" asp-action="Search">
     <p>
-        Last Or First Name Search <input type="text" name="SearchString">
-        <input type="submit" value="Filter" />
+        <input type="text" name="SearchString">
+      
+        <input type="submit" value="Search by first or last name" class="btn btn-outline-info"/>
     </p>
 </form>
 
@@ -67,3 +68,4 @@
         }
     </tbody>
 </table>
+</body>
